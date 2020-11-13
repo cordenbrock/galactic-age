@@ -9,6 +9,6 @@ describe('Planets', () => {
   });
 
   test('Should correctly instantiate Planet object', () => {
-  expect(planet.earthAge).toEqual(300);
+  expect(planet.earthAge).toEqual(30);
   });
 });  
