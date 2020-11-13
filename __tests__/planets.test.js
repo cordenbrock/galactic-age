@@ -11,6 +11,6 @@ describe('Planets', () => {
   expect(planet.earthAge).toEqual(30);
   });
   test('Should correctly calculate earth age on mercury', () => {
-    expect(planet.calcMercuryAge(planet.earthAge)).toEqual(126);
+    expect(planet.calcMercuryAge(planet.earthAge)).toEqual(125);
     });
 });  
