@@ -12,6 +12,6 @@ test('Should correctly construct Human-object with age and attribute properties'
     expect(human).toEqual( {"age": 30, "attr1": 5, "attr2": 15, "attr3": 25, "lifeExpectancy": 100} );
   });
   test('Should correctly calculate Earth-life-expectancy based on user-attributes', () => {
-    expect(human.calcEarthLifeExpectancy()).toEqual(100);
+    expect(human.calcEarthLifeExpectancy()).toEqual(104.5);
   })
 });  
