@@ -14,6 +14,6 @@ describe('Planets', () => {
     expect(planet.calcMercuryAge(planet.earthAge)).toEqual(125);
     });
     test('Should correctly calculate earth age on venus', () => {
-      expect(planet.calcVenusAge(planet.earthAge)).toEqual(49);
+      expect(planet.calcVenusAge(planet.earthAge)).toEqual(48);
       });
 });  
