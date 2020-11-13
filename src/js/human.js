@@ -1,6 +1,8 @@
 export default class Human {
-  constructor(age, jacks) {
+  constructor(age, attr1, attr2, attr3) {
     this.age = age;
-    this.jacks = jacks;
+    this.attr1 = attr1;
+    this.attr2 = attr2;
+    this.attr3 = attr3;
   }
 };
