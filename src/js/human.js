@@ -6,4 +6,7 @@ export default class Human {
     this.attr3 = attr3;
     this.lifeExpectancy = 100;
   }
+  calcEarthLifeExpectancy() {
+    this.lifeExpectancy += (this.attr1/10) + (this.attr2/10) + (this.attr3/10);
+  }
 };
