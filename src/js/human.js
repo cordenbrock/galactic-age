@@ -8,5 +8,6 @@ export default class Human {
   }
   calcEarthLifeExpectancy() {
     this.lifeExpectancy += (this.attr1/10) + (this.attr2/10) + (this.attr3/10);
+    return this.lifeExpectancy;
   }
 };
