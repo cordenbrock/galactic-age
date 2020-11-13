@@ -20,6 +20,6 @@ describe('Planets', () => {
     expect(planet.calcMarsAge(planet.earthAge)).toEqual(16);
     });
     test('Should correctly calculate earth age on jupiter', () => {
-      expect(planet.calcJupiterAge(planet.earthAge)).toEqual();
+      expect(planet.calcJupiterAge(planet.earthAge)).toEqual(2);
       });
 });  
