@@ -9,4 +9,7 @@ export default class Planets {
   calcMercuryAge() {
     return Math.round(this.earthAge/this.mercury);
   }
+  calcVenusAge() {
+    return Math.round(this.earthAge/this.venus);
+  }
 }
