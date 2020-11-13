@@ -9,6 +9,6 @@ describe('Human', () => {
   });
 
   test('Should correctly construct Human object with an age property', () => {
-  expect(age).toEqual(3);
+  expect(age).toEqual(300);
   });
 });  
