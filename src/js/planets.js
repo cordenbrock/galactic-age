@@ -1,5 +1,9 @@
 export default class Planets {
   constructor(earthAge) {
+    this.earthAge = earthAge;
     this.mercury = .24;
+    this.venus = .62;
+    this.mars = 1.88;
+    this.jupiter = 11.86;
   }
 }
