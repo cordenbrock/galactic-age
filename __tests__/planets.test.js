@@ -8,7 +8,7 @@ describe('Planets', () => {
   });
 
   test('Should correctly instantiate Planet object', () => {
-    expect(planet).toEqual( {"earthAge": 31, "jupiterAge": 2, "marsAge": 17, "mercuryAge": 126, "venusAge": 49} );
+    expect(planet).toEqual( {"earthAge": 30, "jupiterAge": 3, "marsAge": 16, "mercuryAge": 125, "venusAge": 48} );
   });
   // test('Should correctly calculate earth age on mercury', () => {
   //   expect(planet.calcMercuryAge(planet.earthAge)).toEqual(125);

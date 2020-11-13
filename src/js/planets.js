@@ -6,16 +6,4 @@ export default class Planets {
     this.marsAge = Math.round(earthAge/1.88);
     this.jupiterAge = Math.round(earthAge/11.86);
   }
-  // calcMercuryAge() {
-  //   return Math.round(this.earthAge/this.mercury);
-  // }
-  // calcVenusAge() {
-  //   return Math.round(this.earthAge/this.venus);
-  // }
-  // calcMarsAge() {
-  //   return Math.round(this.earthAge/this.mars);
-  // }
-  // calcJupiterAge() {
-  //   return Math.round(this.earthAge/this.jupiter);
-  // }
 }
