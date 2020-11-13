@@ -4,5 +4,6 @@ export default class Human {
     this.attr1 = attr1;
     this.attr2 = attr2;
     this.attr3 = attr3;
+    this.lifeExpectancy = 100;
   }
 };
