@@ -17,6 +17,6 @@ test('Should correctly calculate how many solar life years that user either has 
     let expectancyAge = human.calcAdjustedLifeExpectancy();
     expect(human.compareAgeAndLifeExpectencies(human.age, expectancyAge)).toEqual(75);
     let currentAge = 110;
-    expect(human.compareAgeAndLifeExpectencies(currentAge, expectancyAge)).toEqual(0);
+    expect(human.compareAgeAndLifeExpectencies(currentAge, expectancyAge)).toEqual(5);
   });
 });  
