@@ -5,7 +5,6 @@ export function CalcSolarAges(earthAge) {
   this.marsAge = Math.round(earthAge/1.88);
   this.jupiterAge = Math.round(earthAge/11.86);
 }
-
 export function CalcSolarLifeExpectancies(lifeExpectancy) {
   this.earthExpectancy = lifeExpectancy;
   this.mercuryExpectancy = Math.round((1/.24) * lifeExpectancy);
