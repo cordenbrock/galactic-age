@@ -15,8 +15,8 @@ test('Should correctly calculate Earth-life-expectancy based on user-attributes'
   });
 test('Should correctly calculate how many solar life years that user either has remaining or has surpassed in expectancy on respective planet', () => {
     let expectancyAge = human.calcAdjustedLifeExpectancy();
-    expect(human.compareAgeAndLifeExpectencies(human.age, expectancyAge)).toEqual(75);
+    expect(human.compareAgeAndLifeExpectancies(human.age, expectancyAge)).toEqual(75);
     let currentAge = 110;
-    expect(human.compareAgeAndLifeExpectencies(currentAge, expectancyAge)).toEqual(5);
+    expect(human.compareAgeAndLifeExpectancies(currentAge, expectancyAge)).toEqual(5);
   });
 });  

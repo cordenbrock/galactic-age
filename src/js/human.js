@@ -12,7 +12,7 @@ export default class Human {
     this.adjustedLifeExpectancy = Math.round(this.lifeExpectancy + (this.attr1/10) + (this.attr2/10) + (this.attr3/10));
     return this.adjustedLifeExpectancy;
   }
-  compareAgeAndLifeExpectencies(currentAge, expectancyAge) {
+  compareAgeAndLifeExpectancies(currentAge, expectancyAge) {
     if (currentAge <= expectancyAge) {
       return expectancyAge - currentAge;
     } else {
