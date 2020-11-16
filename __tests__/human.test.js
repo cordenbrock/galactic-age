@@ -3,7 +3,6 @@ import Human from './../src/js/human.js'
 describe('Human', () => {
   
   let human;
-
   beforeEach(() => {
     human = new Human(30, 5, 15, 25)
   });
@@ -14,8 +13,8 @@ test('Should correctly construct Human-object with age and attribute properties'
 test('Should correctly calculate Earth-life-expectancy based on user-attributes', () => {
     expect(human.calcAdjustedLifeExpectancy()).toEqual(105);
   });
-  test('Should correctly calculate how many solar life years that user either has remaining or has surpassed in expectancy on respective planet', () => {
+test('Should correctly calculate how many solar life years that user either has remaining or has surpassed in expectancy on respective planet', () => {
     let expectancyAge = human.calcAdjustedLifeExpectancy();
-    expect(human.compareAgeAndLifeExpectancies(human.age, expectancyAge)).toEqual();
+    expect(human.compareAgeAndLifeExpectencies(human.age, expectancyAge)).toEqual(74);
   });
 });  
