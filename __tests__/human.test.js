@@ -12,9 +12,10 @@ test('Should correctly construct Human-object with age and attribute properties'
     expect(human).toEqual( {"age": 30, "attr1": 5, "attr2": 15, "attr3": 25, "lifeExpectancy": 100} );
   });
 test('Should correctly calculate Earth-life-expectancy based on user-attributes', () => {
-    expect(human.calcEarthLifeExpectancy()).toEqual(104.5);
+    expect(human.calcAdjustedLifeExpectancy()).toEqual(105);
   });
-//test('Should correctly calculate solar-life-expectancies based on Earth-life-expectancy', () => {
-//     expect().toEqual();
-//   }) 
+  test('Should correctly calculate how many solar life years that user either has remaining or has surpassed in expectancy on respective planet', () => {
+    let expectancyAge = human.calcAdjustedLifeExpectancy();
+    expect(human.compareAgeAndLifeExpectancies(human.age, expectancyAge)).toEqual();
+  });
 });  
