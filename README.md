@@ -7,7 +7,7 @@
 ## What does it do?
 
 * This wormhole of a simple web app will delight any user for hours--or perhaps even solar minutes--with dazzling insights into the relative workings of spacetime. 
-* Specifically, the user is prompted to enter their age along with bonus life expectancy attributes (the latter being entirely optional, arbitrarily analyzed, and an admittedly silly feature) and upon submitting their input the user is reciprocated with actual calculations of their relative solar age on the first five planets and respective life expectancies using a baseline earth age of 100yrs.
+* Specifically, the user is prompted to enter their age along with bonus life expectancy traits (the latter being entirely optional, arbitrarily analyzed, and an admittedly absurd feature) and upon submitting their input the user is reciprocated with actual calculations of their relative solar age on the first five planets and respective life expectancies using a baseline earth age of 100yrs.
 
 ## Installation Options
 
@@ -17,12 +17,12 @@
 4. Install required node modules: ``` npm install ```
 5. Launch a live webpack dev-server amenable to personal edits, which will automatically deploy app in default web browser: ``` npm run start ```
 
-    => Alternatively, run the command ``` npm run build ``` to generate a "dist" directory conatining bundled file optimized for employment. Navigate to directory from desktop GUI and double-click index.html file to open in default web browser.
+    => Alternate option from step 5: run the command ``` npm run build ``` to generate a "dist" directory containing bundled files optimized for deployment. Navigate to "dist" directory from desktop GUI and double-click index.html file to open app in default web browser.
 
 ## Why does it do?
 
 * Even though this app is arguably the coolest thing east of pluto, credit for the project idea goes to the wonderful people at Epicodus!
-* Additionally, the core idea behind the development of this app was to promote test-driven-development. I encourage you to explore my implementation of the testing framework Jest and associated test specs below!
+* Additionally, the core idea behind the development of this app was to promote test-driven-development. I encourage you to explore my implementation of Jest and the associated test specs below!
 
 ## Specifications
 
