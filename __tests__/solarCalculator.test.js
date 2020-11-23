@@ -11,19 +11,19 @@ describe('calcSolarAges', () => {
 
   test('Should correctly calculate relative Mercurian age', () => {
     solarCalculations.calcMercuryAge();
-    expect(solarCalculations.mercuryAge).toEqual(124);
+    expect(solarCalculations.mercuryAge).toEqual(125);
   });
   test('Should correctly calculate relative Venusian age', () => {
     solarCalculations.calcVenusAge();
-    expect(solarCalculations.venusAge).toEqual(47);
+    expect(solarCalculations.venusAge).toEqual(48);
   });
   test('Should correctly calculate relative Martian age', () => {
     solarCalculations.calcMarsAge();
-    expect(solarCalculations.marsAge).toEqual(15);
+    expect(solarCalculations.marsAge).toEqual(16);
   });
   test('Should correctly calculate relative Jovian age', () => {
     solarCalculations.calcJupiterAge();
-    expect(solarCalculations.jupiterAge).toEqual(2);
+    expect(solarCalculations.jupiterAge).toEqual(3);
   });
 
 // test('Should correctly instantiate Planet object', () => {
