@@ -28,19 +28,19 @@ describe('calcSolarAges', () => {
 
   test('Should correctly calculate relative Mercurian age', () => {
     solarCalculations.calcMercuryExpectancy();
-    expect(solarCalculations.mercuryExpectancy).toEqual(125);
+    expect(solarCalculations.mercuryExpectancy).toEqual(417);
   });
   test('Should correctly calculate relative Venusian Expectancy', () => {
     solarCalculations.calcVenusExpectancy();
-    expect(solarCalculations.venusExpectancy).toEqual(48);
+    expect(solarCalculations.venusExpectancy).toEqual(161);
   });
   test('Should correctly calculate relative Martian Expectancy', () => {
     solarCalculations.calcMarsExpectancy();
-    expect(solarCalculations.marsExpectancy).toEqual(16);
+    expect(solarCalculations.marsExpectancy).toEqual(53);
   });
   test('Should correctly calculate relative Jovian Expectancy', () => {
     solarCalculations.calcJupiterExpectancy();
-    expect(solarCalculations.jupiterExpectancy).toEqual(3);
+    expect(solarCalculations.jupiterExpectancy).toEqual(8);
   });
 
 
