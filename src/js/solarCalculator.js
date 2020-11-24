@@ -15,7 +15,7 @@ export default class SolarCalculator {
   }
   calcVenusAge() {
     this.venusAge = Math.round(this.earthAge /.62);
-    }
+  }
   calcMarsAge() {
     this.marsAge = Math.round(this.earthAge / 1.88);
   }
@@ -27,7 +27,7 @@ export default class SolarCalculator {
   }
   calcVenusExpectancy() {
     this.venusExpectancy = Math.round(1 / .62 * this.earthExpectancy);
-    }
+  }
   calcMarsExpectancy() {
     this.marsExpectancy = Math.round(1 / 1.88 * this.earthExpectancy);
   }
