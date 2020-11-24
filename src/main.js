@@ -25,16 +25,24 @@ $('#form').on("submit", function(e) {
   solarCalculations.calcVenusExpectancy();
   solarCalculations.calcMarsExpectancy();
   solarCalculations.calcJupiterExpectancy();
-  console.log(solarCalculations);
+  
+  human.compareAgeAndLifeExpectancies(solarCalculations.mercuryAge, solarCalculations.mercuryExpectancy);
+  $('#mercury-output').text(`Age on Mercury: ${solarCalculations.mercuryAge}. Life Expectancy here: ${solarCalculations.mercuryExpectancy}. `);
+  human.yearsLeft ? $('#mercury-output').append(`Years Left: ${human.yearsLeft}`) : $('#mercury-output').append(`Years passed in life expectancy: ${human.yearsSurpassed}`);
 
-  let mercuryAnalysis = human.compareAgeAndLifeExpectancies(solarCalculations.mercuryAge, solarCalculations.mercuryExpectancy);
-  $('#mercury-output').text(`You are ${solarCalculations.mercuryAge} Mercurian years young, friend. Due to your efforts, or lack thereof, in appeasing the interstellar overlords, you can expect to live up to ${solarCalculations.mercuryExpectancy}. That means you should expect a groovy ${mercuryAnalysis} more Mercurian trips around the sun, godspeed cosmic comrade!`);
-  let venusAnalysis = human.compareAgeAndLifeExpectancies(solarCalculations.venusAge, solarCalculations.venusExpectancy);
-  $('#venus-output').text(`You are ${solarCalculations.venusAge} Venusian years young, friend. Due to your efforts, or lack thereof, in appeasing the interstellar overlords, you can expect to live up to ${solarCalculations.venusExpectancy}. That means you should expect a groovy ${venusAnalysis} more Venusian trips around the sun, godspeed cosmic comrade!`);
-  let earthAnalysis = human.compareAgeAndLifeExpectancies(solarCalculations.earthAge, solarCalculations.earthExpectancy);
-  $('#earth-output').text(`You are ${solarCalculations.earthAge} Earth years young, friend. Due to your efforts, or lack thereof, in appeasing the interstellar overlords, you can expect to live up to ${solarCalculations.earthExpectancy}. That means you should expect a groovy ${earthAnalysis} more Earthly trips around the sun, godspeed cosmic comrade!`);
-  let marsAnalysis = human.compareAgeAndLifeExpectancies(solarCalculations.marsAge, solarCalculations.marsExpectancy);
-  $('#mars-output').text(`You are ${solarCalculations.marsAge} Martian years young, friend. Due to your efforts, or lack thereof, in appeasing the interstellar overlords, you can expect to live up to ${solarCalculations.marsExpectancy}. That means you should expect a groovy ${marsAnalysis} more Martian trips around the sun, godspeed cosmic comrade!`);
-  let jupiterAnalysis = human.compareAgeAndLifeExpectancies(solarCalculations.jupiterAge, solarCalculations.jupiterExpectancy);
-  $('#jupiter-output').text(`You are ${solarCalculations.jupiterAge} Jovian years young, friend. Due to your efforts, or lack thereof, in appeasing the interstellar overlords, you can expect to live up to ${solarCalculations.jupiterExpectancy}. That means you should expect a groovy ${jupiterAnalysis} more Jovian trips around the sun, godspeed cosmic comrade!`);
+  human.compareAgeAndLifeExpectancies(solarCalculations.venusAge, solarCalculations.venusExpectancy);
+  $('#venus-output').text(`Age on Venus: ${solarCalculations.venusAge}. Life Expectancy here: ${solarCalculations.venusExpectancy}. `);
+  human.yearsLeft ? $('#venus-output').append(`Years Left: ${human.yearsLeft}`) : $('#venus-output').append(`Years passed in life expectancy: ${human.yearsSurpassed}`);
+
+  human.compareAgeAndLifeExpectancies(solarCalculations.earthAge, solarCalculations.earthExpectancy);
+  $('#earth-output').text(`Age on earth: ${solarCalculations.earthAge}. Life Expectancy here: ${solarCalculations.earthExpectancy}. `);
+  human.yearsLeft ? $('#earth-output').append(`Years Left: ${human.yearsLeft}`) : $('#earth-output').append(`Years passed in life expectancy: ${human.yearsSurpassed}`);
+
+  human.compareAgeAndLifeExpectancies(solarCalculations.marsAge, solarCalculations.marsExpectancy);
+  $('#mars-output').text(`Age on mars: ${solarCalculations.marsAge}. Life Expectancy here: ${solarCalculations.marsExpectancy}. `);
+  human.yearsLeft ? $('#mars-output').append(`Years Left: ${human.yearsLeft}`) : $('#mars-output').append(`Years passed in life expectancy: ${human.yearsSurpassed}`);
+
+  human.compareAgeAndLifeExpectancies(solarCalculations.jupiterAge, solarCalculations.jupiterExpectancy);
+  $('#jupiter-output').text(`Age on jupiter: ${solarCalculations.jupiterAge}. Life Expectancy here: ${solarCalculations.jupiterExpectancy}. `);
+  human.yearsLeft ? $('#jupiter-output').append(`Years Left: ${human.yearsLeft}`) : $('#jupiter-output').append(`Years passed in life expectancy: ${human.yearsSurpassed}`);
 });
