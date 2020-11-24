@@ -3,7 +3,7 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import Human from './js/human.js';
-import { CalcSolarAges, CalcSolarLifeExpectancies } from '../src/js/calculator';
+import SolarCalculator from './js/solarCalculator.js';
 
 $('#form').on("submit", function(e) {
   e.preventDefault();
@@ -13,20 +13,28 @@ $('#form').on("submit", function(e) {
   attrTwoInput = parseInt($('#tusks').val());
   attrThreeInput = parseInt($('#sagan').val());
 
-  let human, solarAges, solarLifeExpectancies;
+  let human, solarCalculations;
   human = new Human(ageInput, attrOneInput, attrTwoInput, attrThreeInput);
   human.calcAdjustedLifeExpectancy();
-  solarAges = new CalcSolarAges(human.age);
-  solarLifeExpectancies = new CalcSolarLifeExpectancies(human.adjustedLifeExpectancy);
-  
-  let mercuryAnalysis = human.compareAgeAndLifeExpectancies(solarAges.mercuryAge, solarLifeExpectancies.mercuryExpectancy);
-  $('#mercury-output').text(`You are ${solarAges.mercuryAge} Mercurian years young, friend. Due to your efforts, or lack thereof, in appeasing the interstellar overlords, you can expect to live up to ${solarLifeExpectancies.mercuryExpectancy}. That means you should expect a groovy ${mercuryAnalysis} more Mercurian trips around the sun, godspeed cosmic comrade!`);
-  let venusAnalysis = human.compareAgeAndLifeExpectancies(solarAges.venusAge, solarLifeExpectancies.venusExpectancy);
-  $('#venus-output').text(`You are ${solarAges.venusAge} Venusian years young, friend. Due to your efforts, or lack thereof, in appeasing the interstellar overlords, you can expect to live up to ${solarLifeExpectancies.venusExpectancy}. That means you should expect a groovy ${venusAnalysis} more Venusian trips around the sun, godspeed cosmic comrade!`);
-  let earthAnalysis = human.compareAgeAndLifeExpectancies(solarAges.earthAge, solarLifeExpectancies.earthExpectancy);
-  $('#earth-output').text(`You are ${solarAges.earthAge} Earth years young, friend. Due to your efforts, or lack thereof, in appeasing the interstellar overlords, you can expect to live up to ${solarLifeExpectancies.earthExpectancy}. That means you should expect a groovy ${earthAnalysis} more Earthly trips around the sun, godspeed cosmic comrade!`);
-  let marsAnalysis = human.compareAgeAndLifeExpectancies(solarAges.marsAge, solarLifeExpectancies.marsExpectancy);
-  $('#mars-output').text(`You are ${solarAges.marsAge} Martian years young, friend. Due to your efforts, or lack thereof, in appeasing the interstellar overlords, you can expect to live up to ${solarLifeExpectancies.marsExpectancy}. That means you should expect a groovy ${marsAnalysis} more Martian trips around the sun, godspeed cosmic comrade!`);
-  let jupiterAnalysis = human.compareAgeAndLifeExpectancies(solarAges.jupiterAge, solarLifeExpectancies.jupiterExpectancy);
-  $('#jupiter-output').text(`You are ${solarAges.jupiterAge} Jovian years young, friend. Due to your efforts, or lack thereof, in appeasing the interstellar overlords, you can expect to live up to ${solarLifeExpectancies.jupiterExpectancy}. That means you should expect a groovy ${jupiterAnalysis} more Jovian trips around the sun, godspeed cosmic comrade!`);
+  solarCalculations = new SolarCalculator(human.age, human.adjustedLifeExpectancy);
+  solarCalculations.calcMercuryAge();
+  solarCalculations.calcVenusAge();
+  solarCalculations.calcMarsAge();
+  solarCalculations.calcJupiterAge();
+  solarCalculations.calcMercuryExpectancy();
+  solarCalculations.calcVenusExpectancy();
+  solarCalculations.calcMarsExpectancy();
+  solarCalculations.calcJupiterExpectancy();
+  console.log(solarCalculations);
+
+  let mercuryAnalysis = human.compareAgeAndLifeExpectancies(solarCalculations.mercuryAge, solarCalculations.mercuryExpectancy);
+  $('#mercury-output').text(`You are ${solarCalculations.mercuryAge} Mercurian years young, friend. Due to your efforts, or lack thereof, in appeasing the interstellar overlords, you can expect to live up to ${solarCalculations.mercuryExpectancy}. That means you should expect a groovy ${mercuryAnalysis} more Mercurian trips around the sun, godspeed cosmic comrade!`);
+  let venusAnalysis = human.compareAgeAndLifeExpectancies(solarCalculations.venusAge, solarCalculations.venusExpectancy);
+  $('#venus-output').text(`You are ${solarCalculations.venusAge} Venusian years young, friend. Due to your efforts, or lack thereof, in appeasing the interstellar overlords, you can expect to live up to ${solarCalculations.venusExpectancy}. That means you should expect a groovy ${venusAnalysis} more Venusian trips around the sun, godspeed cosmic comrade!`);
+  let earthAnalysis = human.compareAgeAndLifeExpectancies(solarCalculations.earthAge, solarCalculations.earthExpectancy);
+  $('#earth-output').text(`You are ${solarCalculations.earthAge} Earth years young, friend. Due to your efforts, or lack thereof, in appeasing the interstellar overlords, you can expect to live up to ${solarCalculations.earthExpectancy}. That means you should expect a groovy ${earthAnalysis} more Earthly trips around the sun, godspeed cosmic comrade!`);
+  let marsAnalysis = human.compareAgeAndLifeExpectancies(solarCalculations.marsAge, solarCalculations.marsExpectancy);
+  $('#mars-output').text(`You are ${solarCalculations.marsAge} Martian years young, friend. Due to your efforts, or lack thereof, in appeasing the interstellar overlords, you can expect to live up to ${solarCalculations.marsExpectancy}. That means you should expect a groovy ${marsAnalysis} more Martian trips around the sun, godspeed cosmic comrade!`);
+  let jupiterAnalysis = human.compareAgeAndLifeExpectancies(solarCalculations.jupiterAge, solarCalculations.jupiterExpectancy);
+  $('#jupiter-output').text(`You are ${solarCalculations.jupiterAge} Jovian years young, friend. Due to your efforts, or lack thereof, in appeasing the interstellar overlords, you can expect to live up to ${solarCalculations.jupiterExpectancy}. That means you should expect a groovy ${jupiterAnalysis} more Jovian trips around the sun, godspeed cosmic comrade!`);
 });
