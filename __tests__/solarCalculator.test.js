@@ -1,6 +1,6 @@
 import SolarCalculator from '../src/js/solarCalculator';
 
-describe('calcSolarAges', () => {
+describe('Calculations of solar ages and life expectancies', () => {
 
   let solarCalculations, earthAge, earthExpectancy;
   beforeEach(() => {
@@ -42,11 +42,4 @@ describe('calcSolarAges', () => {
     solarCalculations.calcJupiterExpectancy();
     expect(solarCalculations.jupiterExpectancy).toEqual(8);
   });
-
-
-
-
-// test('Should correctly instantiate Planet object', () => {
-//     expect(solarCalculator).toEqual( {"earthAge": 30, "jupiterAge": 3, "marsAge": 16, "mercuryAge": 125, "venusAge": 48} );
-//   });
 });  
