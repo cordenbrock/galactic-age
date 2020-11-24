@@ -4,19 +4,19 @@ export default class Human {
     this.attr1 = attr1;
     this.attr2 = attr2;
     this.attr3 = attr3;
-    this.adjustedLifeExpectancy;
     this.lifeExpectancy = 100;
-    this.solarLifeExpectancies;
+    this.adjustedLifeExpectancy;
+    this.yearsLeft;
+    this.yearsSurpassed;
   }
   calcAdjustedLifeExpectancy() {
     this.adjustedLifeExpectancy = Math.round(this.lifeExpectancy + (this.attr1/10) + (this.attr2/10) + (this.attr3/10));
-    return this.adjustedLifeExpectancy;
   }
   compareAgeAndLifeExpectancies(currentAge, expectancyAge) {
     if (currentAge <= expectancyAge) {
-      return expectancyAge - currentAge;
+      this.yearsLeft = expectancyAge - currentAge;
     } else {
-      return currentAge - expectancyAge;
+      this.yearsSurpassed = currentAge - expectancyAge;
     }
   }
 }
