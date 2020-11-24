@@ -15,10 +15,10 @@ describe('Human', () => {
   });
   test('Should correctly calculate how many solar life years that the user has remaining on a planet', () => {
     human.compareAgeAndLifeExpectancies(human.age, human.adjustedLifeExpectancy);
-    expect(human.yearsLeft).toEqual(50);
+    expect(human.yearsLeft).toEqual(75);
   });
   test('Should correctly calculate how many solar life years that the user has surpassed in expectancy on a planet', () => {
     surpassedExpectancyHuman.compareAgeAndLifeExpectancies(surpassedExpectancyHuman.age, surpassedExpectancyHuman.adjustedLifeExpectancy);
-    expect(surpassedExpectancyHuman.yearsSurpassed).toEqual(25);
+    expect(surpassedExpectancyHuman.yearsSurpassed).toEqual(10);
   });
 });  
